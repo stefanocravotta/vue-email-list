@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <link rel="stylesheet" href="style.css">
   <title>Vue Email List</title>
 </head>
 <body>
@@ -13,7 +14,8 @@
   <div id="app">
 
     <div v-if="isLoading">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif?20151024034921" alt="">
+      <div class="lds-dual-ring"></div>
+      <p>Caricamento .....</p>
     </div>
     <ul v-else="">
       <li v-for="mail in mails" >{{mail.response}}</li>
